@@ -1,0 +1,99 @@
+{
+    "$schema": "https://raw.githubusercontent.com/JanDeDobbeleer/oh-my-posh/main/themes/schema.json",
+    "blocks": [
+        {
+            "alignment": "left",
+            "segments": [
+                {
+                    "properties": {
+                        "template": "<#99FEFF>\u250c</>"
+                    },
+                    "style": "plain",
+                    "type": "text"
+                },
+                {
+                    "properties": {
+                        "foreground": "#43853d",
+                        "fetch_package_manager": true,
+                        "npm_icon": " <#cc3a3a></>",
+                        "template": "<#91C483>[\ue781 {{ .Full }}]</>{{ if .PackageManagerIcon }}{{.PackageManagerIcon}}{{ end }}",
+                        "yarn_icon": " <#348cba></>"
+                    },
+                    "style": "diamond",
+                    "type": "node"
+                },
+                {
+                    "properties": {
+                        "folder_icon": "📂",
+                        "folder_separator_icon": "┄",
+                        "home_icon": "🏠 ",
+                        "template": " <#99FEFF>{{ .Path }}</> "
+                    },
+                    "style": "plain",
+                    "type": "path"
+                }
+            ],
+            "type": "prompt"
+        },
+        {
+            "alignment": "right",
+            "segments": [
+                {
+                    "properties": {
+                        "branch_icon": "\ue725 ",
+                        "fetch_stash_count": true,
+                        "fetch_status": true,
+                        "fetch_upstream_icon": true,
+                        "fetch_worktree_count": true,
+                        "template": "{{ .HEAD }}{{ if .Working.Changed }}{{ .Working.String }}{{ end }}{{ if and (.Working.Changed) (.Staging.Changed) }} |{{ end }}{{ if .Staging.Changed }} \uF046 {{ .Staging.String }}{{ end }} "
+                    },
+                    "style": "diamond",
+                    "foreground": "#99FEFF",
+                    "type": "git"
+                },
+                {
+                    "type": "time",
+                    "style": "diamond",
+                    "foreground": "#99FEFF",
+                    "properties": {
+                        "prefix": " \uf5ef ",
+                        "postfix": ""
+                    }
+                }
+            ],
+            "type": "prompt"
+        },
+        {
+            "alignment": "left",
+            "newline": true,
+            "segments": [
+                {
+                    "properties": {
+                        "always_enabled": true,
+                        "template": "<#B983FF>\u2514</> ✏️ "
+                    },
+                    "style": "plain",
+                    "type": "exit"
+                },
+                {
+                    "properties": {
+                        "template": "💩 "
+                    },
+                    "style": "plain",
+                    "type": "exit"
+                }
+            ],
+            "type": "prompt"
+        }
+    ],
+    "console_title": true,
+    "console_title_style": "template",
+    "console_title_template": "{{ .Folder }}",
+    "osc99": true,
+    "transient_prompt": {
+        "background": "transparent",
+        "foreground": "#FEF5ED",
+        "template": "\ue285 "
+    },
+    "version": 1
+}
