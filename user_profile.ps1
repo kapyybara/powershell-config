@@ -50,6 +50,9 @@ Set-Alias add  Set-GitAdd -Force -Option AllScope
 function Set-GitPush { & git push $args }
 Set-Alias push Set-GitPush -Force -Option AllScope
 
+function Set-GitPush { & git push origin mainargs }
+Set-Alias pom Set-GitPush -Force -Option AllScope
+
 function Set-GitFetch { & git fetch $args }
 Set-Alias fetch Set-GitFetch -Force -Option AllScope
 
