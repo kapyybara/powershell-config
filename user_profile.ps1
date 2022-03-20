@@ -31,6 +31,11 @@ Set-Alias y yarn
 Set-Alias c cat
 Set-Alias n nvim 
 Set-Alias p pwd 
+
+# Common App
+Set-Alias pm 'C:\Users\beo16\AppData\Local\Postman\Postman.exe'
+Set-Alias fm 'C:\Users\beo16\AppData\Local\Figma\Figma.exe'
+
 ## Git
 function Set-GitCommit { & git commit -m $args }
 Set-Alias commit  Set-GitCommit
