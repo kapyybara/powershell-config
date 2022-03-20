@@ -22,12 +22,21 @@ Import-Module PSFzf
 Set-PsFzfOption -PSReadlineChordProvider 'Ctrl+f' -PSReadlineChordReverseHistory 'Ctrl+r'
 
 # Alias
-Set-Alias vim nvim 
 Set-Alias ll ls 
 Set-Alias g git
 Set-Alias grep findstr
 Set-Alias tig 'C:\Program Files\Git\usr\bin\tig.exe'
 Set-Alias less 'C:\Program Files\Git\usr\bin\less.exe'
+Set-Alias y yarn 
+Set-Alias c cat
+Set-Alias n nvim 
+Set-Alias p pwd 
+## Git
+function Set-GitCommit { & git commit -am $args }
+Set-Alias c  Set-GitCommit
+
+function Set-GitAdd { & git add -am $args }
+Set-Alias ga  Set-GitAdd
 
 # Ultilities
 function which ($command) {
