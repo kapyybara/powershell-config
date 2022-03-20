@@ -31,16 +31,41 @@ Set-Alias y yarn
 Set-Alias c cat
 Set-Alias n nvim 
 Set-Alias p pwd 
+Set-Alias j z 
 Set-Alias open explorer
+
+# Tree
+function Set-Tree { & treee -f --ignore 'node_modules/, .git/, .gitignore' -a $args }
+Set-Alias te Set-Tree
 
 # Common App
 Set-Alias pm 'C:\Users\beo16\AppData\Local\Postman\Postman.exe'
 Set-Alias fm 'C:\Users\beo16\AppData\Local\Figma\Figma.exe'
 Set-Alias chr 'C:\Program Files\Google\Chrome\Application\chrome.exe'
+Set-Alias mgdb 'C:\Users\beo16\AppData\Local\MongoDBCompass\MongoDBCompass.exe'
 
+# XXX Web access
+# Google search
+function Set-GoogleSearch { 
+	$search_query =	[String]::Join('+',$args)
+	start chrome https://www.google.com/search?q=$search_query
+}
+Set-Alias google Set-GoogleSearch 
+# Youtube search 
+function Set-YoutubeSearch { 
+	$search_query =	[String]::Join('+',$args)
+	start chrome https://www.youtube.com/results?search_query=$search_query
+}
+Set-Alias ytb Set-YoutubeSearch 
+# Zalo
+function Set-Zalo {
+	start chrome chat.zalo.me
+}
+Set-Alias zl Set-Zalo 
 
+# XXX Web access
 
-## Git
+# XXX Git
 function Set-GitCommit { & git commit -m $args }
 Set-Alias commit  Set-GitCommit -Force -Option AllScope
 
@@ -67,6 +92,7 @@ Set-Alias remote Get-GitRemote -Force -Option AllScope
 
 function Get-GitPull { & git pull $args }
 Set-Alias pull Get-GitPull -Force -Option AllScope
+# XXX Git
 
 # Ultilities
 function which ($command) {
