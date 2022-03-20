@@ -33,12 +33,13 @@ Set-Alias n nvim
 Set-Alias p pwd 
 ## Git
 function Set-GitCommit { & git commit -m $args }
-Set-Alias c  Set-GitCommit
+Set-Alias commit  Set-GitCommit
 
 function Set-GitAdd { & git add $args }
-Set-Alias ga  Set-GitAdd
+Set-Alias add  Set-GitAdd
 
-
+function Set-GitPush { & git push $args }
+Set-Alias push Set-GitPush
 
 # Ultilities
 function which ($command) {
