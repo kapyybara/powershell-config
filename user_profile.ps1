@@ -34,6 +34,7 @@ Set-Alias p pwd
 Set-Alias j z 
 Set-Alias open explorer
 Set-Alias fuck thefuck 
+Set-Alias psql "C:\Program Files\PostgreSQL\14\scripts\runpsql.bat"
 
 # Tree
 function Set-Tree { & treee -f --ignore 'node_modules/, .git/, .gitignore' -a $args }
@@ -45,8 +46,8 @@ Set-Alias fm 'C:\Users\beo16\AppData\Local\Figma\Figma.exe'
 Set-Alias chr 'C:\Program Files\Google\Chrome\Application\chrome.exe'
 Set-Alias mgdb 'C:\Users\beo16\AppData\Local\MongoDBCompass\MongoDBCompass.exe'
 Set-Alias zl 'C:\Users\beo16\AppData\Local\Programs\Zalo\Zalo.exe' 
-Set-Alias sotree 'C:\Users\beo16\AppData\Local\SourceTree\SourceTree.exe' 
-
+Set-Alias sot 'C:\Users\beo16\AppData\Local\SourceTree\SourceTree.exe' 
+Set-Alias notion 'C:\Users\beo16\AppData\Local\Programs\Notion\Notion.exe'
 
 # XXX Web access
 # Google search
